@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="styles/style.css" type="text/css" />
+    <link rel="stylesheet" href="styles/bootstrap.css" type="text/css" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	
+	<title>MAD Event</title>
+</head>
+<body>
+	<nav class="navbar navbar-light bg-faded">
+	  <a class="navbar-brand" href="index.html">Rosalind Brady</a>
+	    <ul class="navbar-nav">
+	      <li class="nav-item active">
+	        <a class="nav-link" href="select_events.html">Select Events <span class="sr-only">(current)</span></a>
+	      </li>
+	      <li class="nav-item">
+	        <a class="nav-link" href="contact.html">Contact</a>
+	      </li>
+	      <li class="nav-item">
+	        <a class="nav-link" href="about.html">About Me</a>
+	      </li>
+	    </ul>
+	  </div>
+	</nav>
+	<div class="header">
+		<h1> MAD </h1>
+	</div>
+	<div class="container">
+				<div class="col-md-1">
+					<button id="backward">&lt;</button>
+				</div>
+				<div class="col-md-10">
+					<img id="bigImage" class="large-img" src="images/MAD-images/image1.png" alt="Bulg"/> 
+				</div>
+				<div class="col-md-1">
+					<button id="forward">&gt;</button>
+				</div>
+			</div>
+		</div>
+	</div>
+		<div class="container">
+		<div class="row">
+	<div class="container flavor-text">
+		<p>A Roman Bacchanal to celebrate the opening of 'Bvlgari & Rome: Eternal Inspiration' exhibition: An indulgent banquet for 50 </p>
+
+		<p>An evening based on the Ancient Roman festivals of the cult of Bacchus, “god of wine, freedom, and ecstasy.” Bacchanalia are held in strict privacy, and initiates are bound to secrecy. </p>
+
+		<p>Proposed triclinium seating arrangement: three tables in a U shape in the triclinium (formal dining room.) Revelers recline to eat, drink, and converse.</p>
+
+		<p>Floral design compliments the fresco palate, and is inspired by the richly detailed frescoes of the painted garden at Villa of Liva in Prima Porta: Fruiting pomegranites and citrus trees mingle with lush laurel, ivy, Italian Cyprus, date palms, as well as flowering acanthus, rose, poppy, chrysanthemum, chamomile violet, and iris Décor color palette is based on the deep, earthy colors of Roman frescoes: Pompey Red, Burnt Sienna. Etched roman glass for tableware. </p>
+		<div class="row">
+			<div class="col-md-3">
+				<img id="image1" 
+				 class="crop-img" src=images/MAD-images/image1.jpg alt="graffittied building"/> 
+			</div>
+			<div class="col-md-3">
+				<img id="image2" class="crop-img" src=images/MAD-images/image2.jpg alt="display of cheese"/> 
+			</div>
+			<div class="col-md-3">
+				<img id="image3" class="crop-img" src=images/MAD-images/image3.jpg alt="synethesizer workshop"/> 
+			</div>
+			<div class="col-md-3">
+				<img id="image4" class="crop-img" src=images/MAD-images/image4.png alt="City night"/> 
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-3">
+				<img id="image5" 
+				 class="crop-img" src=images/MAD-images/image5.png alt="graffittied building"/> 
+			</div>
+			<div class="col-md-3">
+				<img id="image6" class="crop-img" src=images/MAD-images/image6.png alt="display of cheese"/> 
+			</div>
+			<div class="col-md-3">
+				<img id="image7" class="crop-img" src=images/MAD-images/image7.png alt="synethesizer workshop"/> 
+			</div>
+			<div class="col-md-3">
+				<img id="image8" class="crop-img" src=images/MAD-images/image8.png alt="City night"/> 
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-4">
+				<img id="image9" 
+				 class="crop-img" src=images/MAD-images/image9.png alt="graffittied building"/> 
+			</div>
+			<div class="col-md-4">
+				<img id="image10" class="crop-img" src=images/MAD-images/image10.png alt="display of cheese"/> 
+			</div>
+			<div class="col-md-4">
+				<img id="image11" class="crop-img" src=images/MAD-images/image11.png alt="synethesizer workshop"/>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-4">
+				<img id="image12" 
+				 class="crop-img" src=images/MAD-images/image12.png alt="graffittied building"/> 
+			</div>
+			<div class="col-md-4">
+				<img id="image13" class="crop-img" src=images/MAD-images/image13.png alt="display of cheese"/> 
+			</div>
+			<div class="col-md-4">
+				<img id="image14" class="crop-img" src=images/MAD-images/image14.png alt="display of cheese"/> 
+			</div>
+		</div>
+	</div>
+<script>
+		$(".crop-img").click(function(){
+			$("#bigImage").attr('src', 
+				$(this).attr('src'));
+		});
+		var counter = 1;
+		$("#image"+counter).click();
+		$("#backward").click(function (){
+			counter = counter - 1;
+			if(counter < 1){
+				counter = 12;
+			}
+			$("#image"+counter).click();
+		});
+		$("#forward").click(function (){
+			counter = counter + 1;
+			if(counter > 12){
+				counter = 1;
+			}
+			$("#image"+counter).click();
+		});
+	</script>
+</body>
+</html>

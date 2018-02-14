@@ -1,10 +1,59 @@
 
 .header {
 	text-align: center;
-	padding-top: 250px;
-	letter-spacing: 6px
+	padding-top: 100px;
+	letter-spacing: 6px;
+	margin: 2em;
 }
 
 a {
 	padding: 8px;
+}
+
+.flavor-text {
+	padding:10;
+}
+
+.portfolio-container{
+	left: 0;
+	right: 0;
+	padding-top: 20px;
+	margin: auto;
+}
+
+.large-image {
+	height: 300px;
+	width : 300px;
+	display:block;
+	margin: auto;
+	opacity: 0.5;
+    filter: alpha(opacity=50);
+    transition: all .3s linear;
+}
+
+.title {
+	text-align: center;
+}
+
+.large-image:hover {
+	opacity: 1;
+	cursor: pointer;
+}
+
+.crop-img{
+  max-height:150px;
+  max-width:100%;
+  margin-bottom: 10px;
+  padding: 5px;
+  opacity: .5;
+}
+
+#bigImage{
+  max-width:100%;
+  margin-top: 10px;
+  padding-bottom: 20px;
+}
+
+.info {
+	text-align: center;
 }
