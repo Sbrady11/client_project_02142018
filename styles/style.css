@@ -57,3 +57,8 @@ a {
 .info {
 	text-align: center;
 }
+
+.logo {
+	height: 200px;
+	width: 200px;
+}
